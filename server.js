@@ -14,7 +14,7 @@ APP.post('/screenshot', function(req,res){
     url: 'https://apileap.com/api/screenshot/v1/urltoimage',
     encoding: 'binary',
     qs: {
-      url: 'http://localhost:3000/',
+      url: 'https://screen-shot-test.herokuapp.com/',
       access_key: '3165e1148d1e4e9fbe59b8ce6f0cd350'
     }
   }, function(error,response,body){
