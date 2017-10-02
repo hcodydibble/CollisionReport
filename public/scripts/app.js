@@ -45,24 +45,24 @@ function initMap() {
 
       map.setCenter(pos);
     }, function() {
-      handleLocationError(true, infoWindow, map.getCenter());
+      handleLocationError(true, map.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
+    handleLocationError(false, map.getCenter());
   }
 
   map.addListener('click', function(e) {
-    placeMarkerAndPanTo(e.latLng, map);
+    placeMarker(e.latLng, map);
   });
 
-  function placeMarkerAndPanTo(latLng, map) {
+  function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
       position: latLng,
       map: map
     });
     //this code (latLng.lat().toFixed(3) gets the latitude for wherever the user placed the marker)
-    console.log(latLng.lat().toFixed(3));
-    map.panTo(latLng);
+    console.log(latLng.lat().toFixed(6));
+    console.log(latLng.lng().toFixed(6));
   }
 }
