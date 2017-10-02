@@ -16,6 +16,7 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
+      console.log(pos);
 
         var myCar = new google.maps.Circle({
           strokeColor: 'blue',
@@ -25,7 +26,7 @@ function initMap() {
           fillOpacity: 0.5,
           map: map,
           center: {lat: position.coords.latitude, lng: position.coords.longitude},
-          radius: 1.5,
+          radius: 1,
           draggable: true
         });
         var otherCar = new google.maps.Circle({
@@ -36,7 +37,7 @@ function initMap() {
           fillOpacity: 0.5,
           map: map,
           center: {lat: position.coords.latitude, lng: position.coords.longitude},
-          radius: 1.5,
+          radius: 1,
           draggable: true
         });
 
