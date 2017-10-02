@@ -5,26 +5,27 @@ nav ul li {
   background-color: white;
 }
 
-@media only screen and (min-width: 640px) {
+.hamburger {
+  font-size: 2em;
+  float: right;
+}
+
+@media all and (min-width: 800px) {
   nav ul {
     display: block;
     float: right;
   }
-
-
-  nav span.icon-menu {
-    display: none;
-  }
-};
-
-
-* {
-  box-sizing: border-box;
-
-@media all and (min-width: 800px) {
-
   #map {
     height: 75vh;
     width: 75vw;
   }
+  @media only screen and (min-width: 640px) {
+    .hamburger {
+      display: none;
+    }
+  }
+};
+
+* {
+  box-sizing: border-box;
 }
