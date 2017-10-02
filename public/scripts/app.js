@@ -4,7 +4,7 @@ var map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 18
+    zoom: 20
   });
   //only need the infoWindow if we want to display something over the map, like a message (see code above map.setCenter(pos))
   // infoWindow = new google.maps.InfoWindow;
