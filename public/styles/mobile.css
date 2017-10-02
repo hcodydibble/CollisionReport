@@ -5,7 +5,6 @@
 
 header {
   background: #211B27;
-  /*background-image: 'img/IMAG113 copy.png';*/
   color: #2FC2FF;
   padding: 25px;
 }
@@ -13,4 +12,11 @@ h1 {
   font-style: oblique;
   font-size: 30px;
   margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 300px) {
+  .icon-menu {
+    /*display: none;*/
+  }
+
 }
