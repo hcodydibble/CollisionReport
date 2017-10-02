@@ -11,20 +11,21 @@ nav ul li {
 }
 
 @media all and (min-width: 800px) {
-  nav ul {
-    display: block;
+  .icon-menu {
+    display: inline;
     float: right;
+}
   }
   #map {
     height: 75vh;
     width: 75vw;
   }
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 800px) {
     .hamburger {
       display: none;
         }
-  }
-};
+  };
+
 
 * {
   box-sizing: border-box;

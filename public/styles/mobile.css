@@ -13,10 +13,6 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
-
-@media only screen and (min-width: 300px) {
-  .icon-menu {
+.icon-menu {
     /*display: none;*/
   }
-
-}
