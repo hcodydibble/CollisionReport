@@ -32,5 +32,3 @@ function initMap() {
     handleLocationError(false, infoWindow, map.getCenter());
   }
 }
-
-initMap();
