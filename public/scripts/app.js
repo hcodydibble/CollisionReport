@@ -33,4 +33,7 @@ function initMap() {
   }
 }
 
-initMap();
+$('#button').on('click',function(){
+  $.post('/screenshot')
+    .then(console.log('I took a screenshot' ))
+})
