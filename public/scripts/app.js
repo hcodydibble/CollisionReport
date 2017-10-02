@@ -6,8 +6,6 @@ function initMap() {
     center: {lat: -34.397, lng: 150.644},
     zoom: 21,
   });
-  //only need the infoWindow if we want to display something over the map, like a message (see code above map.setCenter(pos))
-  // infoWindow = new google.maps.InfoWindow;
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -16,7 +14,6 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-      console.log(pos);
 
         var myCar = new google.maps.Circle({
           strokeColor: 'blue',
@@ -36,10 +33,15 @@ function initMap() {
           fillColor: 'red',
           fillOpacity: 0.5,
           map: map,
-          center: {lat: position.coords.latitude, lng: position.coords.longitude},
+          center: {lat: position.coords.latitude, lng: position.coords.longitude + 0.00003},
           radius: 1,
           draggable: true
         });
+        // var arrow = new google.maps.Marker({
+        //   center: {lat: position.coords.latitude, lng: position.coords.longitude + 0.00003},
+        //   map: map,
+        //   path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW
+        // })
 
       map.setCenter(pos);
     }, function() {
