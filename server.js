@@ -9,4 +9,4 @@ APP.use(EXPRESS.static('public'));
 
 APP.get('*', (request, response) => response.sendFile('index.html', {root: './public'}));
 
-APP.listen(PORT, () => console.log(`Servere running on port ${PORT}`))
+APP.listen(PORT, () => console.log(`Express server is currently running on port ${PORT}`))
