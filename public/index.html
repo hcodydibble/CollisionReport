@@ -14,10 +14,13 @@
   <header>
     <h1>Report My Wreck!</h1>
     <nav>
-      <div id="map"></div>
-      <div id="notes"></div>
-      <div id="about"></div>
+      <ul>
+        <li class="tab" data-content="map"><a href="#map">Map</li>
+        <li class="tab" data-content="about"><a href="#about">About</li>
+          <li class="tab" data-content="notes"><a href="#map">Notes</li>
+          </ul>
     </nav>
+    <div id="map"></div>
   </header>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjau7uLhokdjg9dF_BKMd3nNrdi3_S2Ak&callback=initMap"
   type="text/javascript"></script>

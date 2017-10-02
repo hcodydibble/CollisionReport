@@ -1,8 +1,23 @@
-* {
-  box-sizing: border-box;
+nav ul li {
+  display: inline;
+  float: right;
+  border: 1px solid black;
+  background-color: white;
 }
 
-#map {
-  height: 75vh;
-  width: 75vw;
+@media only screen and (min-width: 640px) {
+  nav ul {
+    display: block;
+    float: right;
+  }
+
+
+  nav span.icon-menu {
+    display: none;
+  }
+};
+
+
+* {
+  box-sizing: border-box;
 }
