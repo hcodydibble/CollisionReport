@@ -19,6 +19,7 @@
     <nav class"main-nav">
       <div class="icon-menu">
         <ul>
+          <li class="tab" data-content="map"><a href="/">Home</a></li>
           <li class="tab" data-content="map"><a href="/map">Map</a></li>
           <li class="tab" data-content="about"><a href="/about">About</a></li>
           <li class="tab" data-content="notes"><a href="/notes">Notes</a></li>
@@ -26,13 +27,46 @@
       </div>
     </nav>
   </header>
-  <div id="map"></div>
-  <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Then you can select icons to represent the orientation of the vehicles involved and drop them as pins to the map.  Once you have completed the visual representation of the accident, click on SAVE MAP.  Now you can add notes about the accident, such as a description of how the wreck happened, and other pertinent data that your adjustor will need.  Once that is filled out, you can add email addresses to the appropriate fields and hit the EMAIL button to send the report to your insurance adjustor.</p>
-  <button type="button">Start!</button>
+  <main>
+    <div class="indexPage">
+      <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Then you can select icons to represent the orientation of the vehicles involved and drop them as pins to the map.  Once you have completed the visual representation of the accident, click on SAVE MAP.  Now you can add notes about the accident, such as a description of how the wreck happened, and other pertinent data that your adjustor will need.  Once that is filled out, you can add email addresses to the appropriate fields and hit the EMAIL button to send the report to your insurance adjustor.</p>
+      <button type="button">Start!</button>
+    </div>
+    <div class="mapPage" >
+      <div id="map"></div>
+
+    </div>
+    <div class="notesPage">
+      <section>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </section>
+    </div>
+    <div class="aboutPage">
+      <section id="cody">
+          <img src="https://i.ytimg.com/vi/2UPxrJy1zyA/maxresdefault.jpg" alt="">
+      </section>
+      <section id="shannon">
+        <img src="https://i.ytimg.com/vi/J2tuDGEm_vs/maxresdefault.jpg" alt="">
+      </section>
+      <section id="george">
+        <img src="https://media.ed.edmunds-media.com/srt/viper/2013/oem/2013_srt_viper_coupe_gts_fq_oem_2_1280.jpg" alt="">
+      </section>
+      <section id="rob">
+        <img src="https://www.tesla.com/tesla_theme/assets/img/models/v1.0/section-hero-background.jpg?20170907" alt="">
+      </section>
+
+    </div>
+
+  </main>
 </body>
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controller/mapController.js"></script>
-  <!-- <script src="scripts/controller/routes.js"></script> -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjau7uLhokdjg9dF_BKMd3nNrdi3_S2Ak&callback=initMap"
+<script src="scripts/app.js"></script>
+<script src="scripts/controller/mapController.js"></script>
+<script src="scripts/view/indexView.js"></script>
+<script src="scripts/view/aboutView.js"></script>
+<script src="scripts/view/mapView.js"></script>
+<script src="scripts/view/notesView.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjau7uLhokdjg9dF_BKMd3nNrdi3_S2Ak&callback=initMap"
   type="text/javascript"></script>
+<script src="scripts/controller/routes.js"></script>
 </html>

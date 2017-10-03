@@ -1,7 +1,8 @@
 'use strict';
 
-page('/', homefunction);
-page('/map', mapfunction);
-page('/notes', notesfunction);
-page('/about', aboutfunction);
+page('/', indexView);
+page('/map', mapView);
+page('/notes', notesView);
+page('/about', aboutView);
+
 page();
