@@ -3,6 +3,7 @@
 var markers = [];
 var initialLocation;
 var map;
+var car;
 
 $('#myLocationButton').on('click', myLocation);
 
@@ -37,13 +38,13 @@ function initMap() {
   });
 
   $('#carIcons img').on('click', function(event){
-    console.log(event.target.src)
+    car = event.target;
   })
   function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
       position: latLng,
       map: map,
-      icon: './img/270deg-black.png',
+      icon: car.src,
       animation: google.maps.Animation.DROP
     });
     markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker});
