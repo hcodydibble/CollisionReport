@@ -30,12 +30,30 @@
   <main>
     <div class="indexPage">
       <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Then you can select icons to represent the orientation of the vehicles involved and drop them as pins to the map.  Once you have completed the visual representation of the accident, click on SAVE MAP.  Now you can add notes about the accident, such as a description of how the wreck happened, and other pertinent data that your adjustor will need.  Once that is filled out, you can add email addresses to the appropriate fields and hit the EMAIL button to send the report to your insurance adjustor.</p>
-      <button type="button">Start!</button>
+      <button type="button" id="startButton" href="/map">Start!</button>
     </div>
     <div class="mapPage" >
+      <p>Type in the location of your accident, or click the Use My Location button. Then select your car icons and place them on the map to simulate the circumstances of the accident. Then click the Next button to move to the next page where you can give your description of the incident.</p>
       <div id="map"></div>
+      <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
+      <button id="saveMap" type="button" name="saveMap">Next</button>
+      <aside class="carIcons">
+        <button id="carSelect" type="button" name="button">Select a Car</button>
+        <ul id="carIcons">
+          <li><img src="img/0deg-white.png" alt=""></li>
+          <li><img src="img/90deg-white.png" alt=""></li>
+          <li><img src="img/180deg-white.png" alt=""></li>
+          <li><img src="img/270deg-white.png" alt=""></li>
+          <li><img src="img/0deg-black.png" alt=""></li>
+          <li><img src="img/90deg-black.png" alt=""></li>
+          <li><img src="img/180deg-black.png" alt=""></li>
+          <li><img src="img/270deg-black.png" alt=""></li>
+        </ul>
 
+      </aside>
     </div>
+
+
     <div class="notesPage">
       <section>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
