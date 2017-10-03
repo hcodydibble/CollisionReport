@@ -31,13 +31,14 @@ function initMap() {
   function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
       position: latLng,
-      map: map
+      map: map,
+      animation: google.maps.Animation.DROP
     });
-    markers.push(marker);
-    //to access a specific marker's lat/long: markers[0].getPosition().lat() OR markers[0].getPosition().lng()
-    //this code (latLng.lat().toFixed(6) gets the latitude for wherever the user placed the marker to the six decimal place)
-    //remove marker at specific position with markers[0].setMap(null); will need to adjust array length b/c will remove marker from map NOT from marker array (use above code in conjunction w/ arr.pop to remove from map)
-    console.log(latLng.lat().toFixed(6));
-    console.log(latLng.lng().toFixed(6));
+    markers.push({lat: latLng.lat().toFixed(6), long: latLng.lng().toFixed(6), marker: marker});
   }
+
+  $('#removeMarker').on('click', function(){
+    markers[markers.length - 1].marker.setMap(null);
+    markers.pop()
+  })
 }
