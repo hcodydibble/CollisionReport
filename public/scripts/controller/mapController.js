@@ -2,6 +2,7 @@
 
 var markers = [];
 var map;
+
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
@@ -41,4 +42,18 @@ function initMap() {
     markers[markers.length - 1].marker.setMap(null);
     markers.pop()
   })
+}
+
+function geocodeAddress(){
+  var geocoder = new google.maps.Geocoder();
+  let address = $('formField').val()
+  geocoder.geocode({'address': address}, function(results,status){
+    console.log(status)
+    if(status === 'OK'){
+      console.log(results)
+      map.setCenter(results[0].geometry.location)
+    }else{
+      alert('Geocoding was unsuccessful because of this: ' + status + '.')
+    }
+  });
 }
