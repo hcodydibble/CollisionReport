@@ -80,7 +80,7 @@ function geocodeAddress(){
 
 $('#saveMap').on('click', function(){
   try{
-    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600&markers=${car.src}|${markers[0].lat},${markers[0].lng}&markers=${car.src}|${markers[1].lat},${markers[1].lng}&markers=${car.src}|${markers[2].lat},${markers[2].lng}&markers=${car.src}|${markers[3].lat},${markers[3].lng}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600&markers=icon:${car.src}|${markers[0].lat},${markers[0].lng}&markers=icon:${car.src}|${markers[1].lat},${markers[1].lng}&markers=icon:${car.src}|${markers[2].lat},${markers[2].lng}&markers=icon:${car.src}|${markers[3].lat},${markers[3].lng}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
   }catch(e){
     console.log(e)
   }
