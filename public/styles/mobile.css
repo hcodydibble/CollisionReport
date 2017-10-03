@@ -17,3 +17,15 @@ h1 {
   .icon-menu {
     display: none;
   }
+section img {
+  height: 20vh;
+  /*width: 80vw;*/
+}
+button {
+  height: 30px;
+  margin: 20px;
+}
+
+#carIcons {
+  margin-left: 10px
+}
