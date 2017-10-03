@@ -13,19 +13,32 @@ h1 {
   font-size: 30px;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 800px) {
-  .icon-menu {
-    display: none;
-  }
+
 section img {
   height: 20vh;
-  /*width: 80vw;*/
 }
+
 button {
   height: 30px;
   margin: 20px;
 }
 
+nav {
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  top: -50px;
+  left: 540px;
+  background-color: grey;
+
+}
+.hamburger {
+  font-size: 2em;
+}
+
 #carIcons {
   margin-left: 10px
+}
+.icon-menu {
+
 }
