@@ -1,5 +1,4 @@
 'use strict';
-
 // var markers = [];
 // var map;
 // function initMap() {
