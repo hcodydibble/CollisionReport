@@ -16,7 +16,6 @@ function myLocation(){
 
       map.setCenter(pos);
       initialLocation = pos;
-      console.log(initialLocation);
     },
     function() {
       handleLocationError(true, map.getCenter());
@@ -30,17 +29,21 @@ function myLocation(){
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 19,
+    zoom: 21,
   });
 
   map.addListener('click', function(e) {
     placeMarker(e.latLng, map);
   });
 
+  $('#carIcons img').on('click', function(event){
+    console.log(event.target.src)
+  })
   function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
       position: latLng,
       map: map,
+      icon: './img/270deg-black.png',
       animation: google.maps.Animation.DROP
     });
     markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker});
