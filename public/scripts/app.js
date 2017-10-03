@@ -15,28 +15,28 @@ function initMap() {
         lng: position.coords.longitude
       };
 
-        var myCar = new google.maps.Circle({
-          strokeColor: 'blue',
-          strokeOpacity: 0.8,
-          strokeWeight: 2,
-          fillColor: 'blue',
-          fillOpacity: 0.5,
-          map: map,
-          center: {lat: position.coords.latitude, lng: position.coords.longitude},
-          radius: 1,
-          draggable: true
-        });
-        var otherCar = new google.maps.Circle({
-          strokeColor: 'red',
-          strokeOpacity: 0.8,
-          strokeWeight: 2,
-          fillColor: 'red',
-          fillOpacity: 0.5,
-          map: map,
-          center: {lat: position.coords.latitude, lng: position.coords.longitude + 0.00003},
-          radius: 1,
-          draggable: true
-        });
+      var myCar = new google.maps.Circle({
+        strokeColor: 'blue',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: 'blue',
+        fillOpacity: 0.5,
+        map: map,
+        center: {lat: position.coords.latitude, lng: position.coords.longitude},
+        radius: 1,
+        draggable: true
+      });
+      var otherCar = new google.maps.Circle({
+        strokeColor: 'red',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: 'red',
+        fillOpacity: 0.5,
+        map: map,
+        center: {lat: position.coords.latitude, lng: position.coords.longitude + 0.00003},
+        radius: 1,
+        draggable: true
+      });
         // var arrow = new google.maps.Marker({
         //   center: {lat: position.coords.latitude, lng: position.coords.longitude + 0.00003},
         //   map: map,
