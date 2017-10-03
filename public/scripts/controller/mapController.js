@@ -1,14 +1,12 @@
 'use strict';
 
 var markers = [];
+var initialLocation;
 var map;
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 21,
-  });
+$('#myLocationButton').on('click', myLocation);
 
+function myLocation(){
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
       var pos = {
@@ -17,13 +15,23 @@ function initMap() {
       };
 
       map.setCenter(pos);
-    }, function() {
+      initialLocation = pos;
+      console.log(initialLocation);
+    },
+    function() {
       handleLocationError(true, map.getCenter());
     });
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, map.getCenter());
   }
+}
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 19,
+  });
 
   map.addListener('click', function(e) {
     placeMarker(e.latLng, map);
@@ -35,23 +43,29 @@ function initMap() {
       map: map,
       animation: google.maps.Animation.DROP
     });
-    markers.push({lat: latLng.lat().toFixed(6), long: latLng.lng().toFixed(6), marker: marker});
+    markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker});
   }
-
   $('#removeMarker').on('click', function(){
     markers[markers.length - 1].marker.setMap(null);
     markers.pop()
   })
 }
 
+
+$('#geocodeAddressButton').on('click', geocodeAddress);
+
 function geocodeAddress(){
   var geocoder = new google.maps.Geocoder();
-  let address = $('formField').val()
-  geocoder.geocode({'address': address}, function(results,status){
+  // let address = $('formField').val()
+  geocoder.geocode({'address': 'address'}, function(results,status){
     console.log(status)
     if(status === 'OK'){
       console.log(results)
       map.setCenter(results[0].geometry.location)
+      initialLocation = {
+        lat: results[0].geometry.location.lat().toFixed(6),
+        lng: results[0].geometry.location.lng().toFixed(6)
+      };
     }else{
       alert('Geocoding was unsuccessful because of this: ' + status + '.')
     }
