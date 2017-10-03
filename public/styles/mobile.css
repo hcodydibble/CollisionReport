@@ -14,5 +14,8 @@ h1 {
   margin-bottom: 20px;
 }
 .icon-menu {
-    /*display: none;*/
   }
+section img {
+  height: 20vh;
+  /*width: 80vw;*/
+}
