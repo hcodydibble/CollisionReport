@@ -30,7 +30,8 @@ function myLocation(){
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 21,
+    zoom: 19,
+    gestureHandling: 'none'
   });
 
   map.addListener('click', function(e) {
@@ -60,8 +61,8 @@ $('#geocodeAddressButton').on('click', geocodeAddress);
 
 function geocodeAddress(){
   var geocoder = new google.maps.Geocoder();
-  // let address = $('formField').val()
-  geocoder.geocode({'address': 'address'}, function(results,status){
+  let address = $('#formField').val()
+  geocoder.geocode({'address': address}, function(results,status){
     console.log(status)
     if(status === 'OK'){
       console.log(results)
@@ -70,8 +71,17 @@ function geocodeAddress(){
         lat: results[0].geometry.location.lat().toFixed(6),
         lng: results[0].geometry.location.lng().toFixed(6)
       };
+      $('#formField').val('');
     }else{
       alert('Geocoding was unsuccessful because of this: ' + status + '.')
     }
   });
 }
+
+$('#saveMap').on('click', function(){
+  try{
+    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600&markers=./public/img/${car.alt}|${markers[0].lat},${markers[0].lng}&markers=./public/img/${car.alt}|${markers[1].lat},${markers[1].lng}&markers=./public/img/${car.alt}|${markers[2].lat},${markers[2].lng}&markers=./public/img/${car.alt}|${markers[3].lat},${markers[3].lng}`)
+  }catch(e){
+    console.log(e)
+  }
+})
