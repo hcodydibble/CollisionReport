@@ -14,7 +14,6 @@ function initMap() {
         lng: position.coords.longitude
       };
 
-
         // var myCar = new google.maps.Circle({
         //   strokeColor: 'blue',
         //   strokeOpacity: 0.8,
