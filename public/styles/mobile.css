@@ -1,0 +1,18 @@
+#map {
+  height: 75vh;
+  width: 75vw;
+}
+
+header {
+  background: #211B27;
+  color: #2FC2FF;
+  padding: 25px;
+}
+h1 {
+  font-style: oblique;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.icon-menu {
+    /*display: none;*/
+  }

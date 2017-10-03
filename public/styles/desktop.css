@@ -1,7 +1,32 @@
-@media all and (min-width: 800px) {
+nav ul li {
+  display: inline;
+  float: right;
+  border: 1px solid black;
+  background-color: white;
+}
 
+.hamburger {
+  font-size: 2em;
+  float: right;
+}
+
+@media all and (min-width: 800px) {
+  .icon-menu {
+    display: inline;
+    float: right;
+}
+  }
   #map {
     height: 75vh;
     width: 75vw;
   }
+  @media only screen and (min-width: 800px) {
+    .hamburger {
+      display: none;
+        }
+  };
+
+
+* {
+  box-sizing: border-box;
 }
