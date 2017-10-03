@@ -31,12 +31,13 @@ function initMap() {
   function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
       position: latLng,
-      map: map
+      map: map,
+      animation: google.maps.Animation.DROP
     });
     markers.push({lat: latLng.lat().toFixed(6), long: latLng.lng().toFixed(6), marker: marker});
   }
 
-  $('#removeButton').on('click', function(){
+  $('#removeMarker').on('click', function(){
     markers[markers.length - 1].marker.setMap(null);
     markers.pop()
   })
