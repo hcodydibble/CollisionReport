@@ -2,8 +2,38 @@
 
 var markers = [];
 var initialLocation;
-var map;
 var car;
+var markerUrls = '';
+var map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 21,
+  });
+
+  map.addListener('click', function(e) {
+    placeMarker(e.latLng, map);
+  });
+
+  $('#carIcons img').on('click', function(event){
+    car = event.target.src;
+    console.log(event.target.src);
+  })
+  function placeMarker(latLng, map) {
+    var marker = new google.maps.Marker({
+      position: latLng,
+      map: map,
+      icon: car,
+      animation: google.maps.Animation.DROP
+    });
+    markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker, path: car});
+  }
+  $('#removeMarker').on('click', function(){
+    markers[markers.length - 1].marker.setMap(null);
+    markers.pop()
+  })
+}
 
 $('#myLocationButton').on('click', myLocation);
 
@@ -27,45 +57,13 @@ function myLocation(){
   }
 }
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 19,
-    gestureHandling: 'none'
-  });
-
-  map.addListener('click', function(e) {
-    placeMarker(e.latLng, map);
-  });
-
-  $('#carIcons img').on('click', function(event){
-    car = event.target;
-  })
-  function placeMarker(latLng, map) {
-    var marker = new google.maps.Marker({
-      position: latLng,
-      map: map,
-      icon: car.src,
-      animation: google.maps.Animation.DROP
-    });
-    markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker});
-  }
-  $('#removeMarker').on('click', function(){
-    markers[markers.length - 1].marker.setMap(null);
-    markers.pop()
-  })
-}
-
-
 $('#geocodeAddressButton').on('click', geocodeAddress);
 
 function geocodeAddress(){
   var geocoder = new google.maps.Geocoder();
   let address = $('#formField').val()
   geocoder.geocode({'address': address}, function(results,status){
-    console.log(status)
     if(status === 'OK'){
-      console.log(results)
       map.setCenter(results[0].geometry.location)
       initialLocation = {
         lat: results[0].geometry.location.lat().toFixed(6),
@@ -79,8 +77,13 @@ function geocodeAddress(){
 }
 
 $('#saveMap').on('click', function(){
+  markers.forEach(function(marker){
+    markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
+    console.log(markerUrls);
+    return markerUrls;
+  })
   try{
-    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600&markers=icon:${car.src}|${markers[0].lat},${markers[0].lng}&markers=icon:${car.src}|${markers[1].lat},${markers[1].lng}&markers=icon:${car.src}|${markers[2].lat},${markers[2].lng}&markers=icon:${car.src}|${markers[3].lat},${markers[3].lng}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
   }catch(e){
     console.log(e)
   }
