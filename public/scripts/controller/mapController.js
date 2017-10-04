@@ -47,7 +47,7 @@ function myLocation(){
       };
 
       map.setCenter(pos);
-      initialLocation = pos;
+      // initialLocation = pos;
     },
     function() {
       handleLocationError(true, map.getCenter());
@@ -66,10 +66,10 @@ function geocodeAddress(){
   geocoder.geocode({'address': address}, function(results,status){
     if(status === 'OK'){
       map.setCenter(results[0].geometry.location)
-      initialLocation = {
-        lat: results[0].geometry.location.lat().toFixed(6),
-        lng: results[0].geometry.location.lng().toFixed(6)
-      };
+      // initialLocation = {
+      //   lat: results[0].geometry.location.lat().toFixed(6),
+      //   lng: results[0].geometry.location.lng().toFixed(6)
+      // };
       $('#formField').val('');
     }else{
       alert('Geocoding was unsuccessful because of this: ' + status + '.')
@@ -78,6 +78,7 @@ function geocodeAddress(){
 }
 
 $('#saveMap').on('click', function(){
+  initialLocation = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
   markers.forEach(function(marker){
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
