@@ -30,7 +30,7 @@ nav {
   font-size: 2em;
   padding-right: 4vw;
   float: right;
-}  
+}
 
 .icon-menu {
   display: none;
@@ -42,11 +42,14 @@ nav {
 	border: 1px solid black;
 }
 
-#map {
-  height: 75vh;
-  width: 90vw;
-}
-
 #robCar{
   max-width: 100%;
+}
+
+button {
+  height: 5vw;
+  margin: 20px;
+	font-size: 2vw;
+	display: table-cell;
+	vertical-align: middle;
 }
