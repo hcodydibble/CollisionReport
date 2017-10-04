@@ -55,21 +55,12 @@ main {
 	line-height: 1.2;
 }
 
-#mapPageInstructions {
-	padding-bottom: 2vh;
-}
-
-form {
-	padding: 2vh;
-}
-
-.text-area{
-	width: 100%;
-	border: 1px solid black;
-}
-
-header {	
+header {
 	background: #211B27;
 	color: #2FC2FF;
-	padding: 25px 25px 70px 25px;
+}
+
+button {
+  height: 30px;
+  margin: 20px;
 }

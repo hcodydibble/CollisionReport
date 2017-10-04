@@ -2,6 +2,22 @@ body{
   width: 100%;
 }
 
+header {
+  padding: 25px 25px 70px 25px;
+}
+
+form {
+	padding: 2vh;
+}
+
 main {
   margin: 2vh 5vw;
+}
+
+.aboutUs {
+  margin: 0vh 0 5vh;
+}
+
+#mapPageInstructions {
+	padding-bottom: 2vh;
 }
