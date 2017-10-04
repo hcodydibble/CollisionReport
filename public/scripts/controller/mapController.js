@@ -18,7 +18,8 @@ function initMap() {
 
   $('#carIcons img').on('click', function(event){
     car = event.target.src;
-    console.log(event.target.src);
+    $('#carIcons img').css('border', 'none');
+    $(event.target).css('border', 'thin blue solid');
   })
   function placeMarker(latLng, map) {
     var marker = new google.maps.Marker({
