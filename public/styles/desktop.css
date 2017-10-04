@@ -9,10 +9,9 @@
       float: right;
     }
     nav ul li {
-      float: right;
       border: 1px solid black;
-      background-color: white;
       margin-right: .4em;
       font-size: 1.5em;
+      display: inline;
     }
   }
