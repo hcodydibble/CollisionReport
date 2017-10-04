@@ -79,7 +79,6 @@ function geocodeAddress(){
 $('#saveMap').on('click', function(){
   markers.forEach(function(marker){
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
-    console.log(markerUrls);
     return markerUrls;
   })
   try{
