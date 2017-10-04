@@ -79,7 +79,8 @@ $('#saveMap').on('click', function(){
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
-  $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=20&size=700x300${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=20&size=700x300${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  notesView();
 })
 
 $('#emailButton').on('click', function(){
@@ -87,7 +88,7 @@ $('#emailButton').on('click', function(){
     from: `"${$('#userName').val()}"<reportmywreck@gmail.com>`,
     to: `${$('#recipient').val()}`,
     subject: `${$('#subject').val()}`,
-    html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
+    html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
   }
   if($('#recipient').val() !== '' && $('#recipient').val().includes('@' && '.')){
     $.post('/mail', mailOptions)
