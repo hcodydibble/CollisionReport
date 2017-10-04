@@ -90,7 +90,7 @@ $('#emailButton').on('click', function(){
   var mailOptions = {
     from: `"${$('#userName').val()}"<reportmywreck@gmail.com>`,
     to: `${$('#recipient').val()}`,
-    subject: 'This hopefully works',
+    subject: `${$('#subject').val()}`,
     html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
   }
   if($('#recipient').val() !== '' && $('#recipient').val().includes('@' && '.')){
