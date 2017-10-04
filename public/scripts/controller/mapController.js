@@ -81,9 +81,5 @@ $('#saveMap').on('click', function(){
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
-  try{
-    $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
-  }catch(e){
-    console.log(e)
-  }
+  $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
 })
