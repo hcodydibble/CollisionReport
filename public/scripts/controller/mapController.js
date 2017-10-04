@@ -86,8 +86,8 @@ $('#saveMap').on('click', function(){
 
 $('#testButton').on('click', function(){
   var mailOptions = {
-    from: 'hcodydibble@gmail.com',
-    to: 'hcodydibble@gmail.com',
+    from: 'reportyouwreck@gmail.com',
+    to: 'reportyouwreck@gmail.com',
     subject: 'This hopefully works',
     text: 'You are seeing this if it worked'
   }

@@ -7,8 +7,8 @@ const PORT = process.env.PORT || 3000;
 const TRANSPORTER = MAILER.createTransport({
   service: 'gmail',
   auth: {
-    user: 'hcodydibble@gmail.com',
-    pass: process.env.EMAIL_PASSWORD
+    user: 'reportyouwreck@gmail.com',
+    pass: 'assword1'
   }
 })
 
