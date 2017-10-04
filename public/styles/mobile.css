@@ -23,18 +23,14 @@ nav {
 .tab a {
   color: #2FC2FF;
   text-decoration: none;
-  padding: 0 4vw;
+  padding: 0 8vw;
 }
 
 .hamburger {
   font-size: 2em;
   padding-right: 4vw;
   float: right;
-}
-
-#carIcons {
-  margin-left: 10px
-}
+}  
 
 .icon-menu {
   display: none;
