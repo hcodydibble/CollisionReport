@@ -18,8 +18,10 @@
   },
   "homepage": "https://github.com/sedillon93/CollisionReport#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.1",
     "fs": "0.0.1-security",
+    "nodemailer": "^4.1.2",
     "request": "^2.83.0"
   }
 }

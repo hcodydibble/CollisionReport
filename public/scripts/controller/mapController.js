@@ -83,3 +83,13 @@ $('#saveMap').on('click', function(){
   })
   $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
 })
+
+$('#testButton').on('click', function(){
+  var mailOptions = {
+    from: 'reportmywreck@gmail.com',
+    to: 'reportmywreck@gmail.com',
+    subject: 'This hopefully works',
+    text: 'You are seeing this if it worked'
+  }
+  $.post('/mail', mailOptions)
+})
