@@ -86,8 +86,8 @@ $('#saveMap').on('click', function(){
 
 $('#testButton').on('click', function(){
   var mailOptions = {
-    from: '"A Dev" <reportmywreck@gmail.com>',
-    to: 'reportmywreck@gmail.com',
+    from: `"${$('#userName').val()}"<reportmywreck@gmail.com>`,
+    to: `${$('#recipient').val()}`,
     subject: 'This hopefully works',
     html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
   }
