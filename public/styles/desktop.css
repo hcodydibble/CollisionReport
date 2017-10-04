@@ -23,6 +23,17 @@
   	font-size: 2vw;
   	display: table-cell;
   	vertical-align: middle;
+    cursor: pointer;
+  }
+  #carIcons{
+    text-align: center;
+  }
+  #carIcons li img{
+    opacity: 0.6;
+    cursor: pointer;
+  }
+  #carIcons li img:hover{
+    opacity: 1;
   }
 
 }
