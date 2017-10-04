@@ -67,3 +67,9 @@ form {
 	width: 100%;
 	border: 1px solid black;
 }
+
+header {	
+	background: #211B27;
+	color: #2FC2FF;
+	padding: 25px 25px 70px 25px;
+}

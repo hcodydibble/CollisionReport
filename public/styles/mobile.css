@@ -3,12 +3,6 @@
   width: 90vw;
 }
 
-header {
-  background: #211B27;
-  color: #2FC2FF;
-  padding: 25px 25px 60px 25px;
-}
-
 h1 {
   font-style: oblique;
   font-size: 30px;
@@ -32,14 +26,20 @@ nav {
   float: right;
 }
 
+.tab {
+  display: inline-block;
+}
+
 .tab a {
   color: #2FC2FF;
   text-decoration: none;
+  padding: 0 5vw;
 }
 
 .hamburger {
   font-size: 2em;
   padding-right: 4vw;
+  float: right;
 }
 
 #carIcons {
@@ -48,4 +48,5 @@ nav {
 
 .icon-menu {
   display: none;
+  float: right;
 }
