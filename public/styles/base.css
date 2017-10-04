@@ -83,3 +83,12 @@ button {
 a {
 	text-decoration: none;
 }
+p{
+	font-family: 'Roboto', sans-serif;
+}
+h1,li{
+	font-family: 'Didact Gothic', sans-serif;
+}
+button,input:focus{
+	outline: 0;
+}
