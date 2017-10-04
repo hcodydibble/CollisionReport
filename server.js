@@ -18,6 +18,7 @@ APP.use(PARSER.urlencoded({ extended: false }))
 APP.use(PARSER.json())
 
 APP.post('/mail',function(req){
+  console.log(req.body)
   TRANSPORTER.sendMail(req.body,function(error,info){
     if(error){
       console.log(error)

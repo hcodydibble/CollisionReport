@@ -30,7 +30,7 @@
   <main>
     <div class="indexPage">
       <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Then you can select icons to represent the orientation of the vehicles involved and drop them as pins to the map.  Once you have completed the visual representation of the accident, click on NEXT.  Now you can add notes about the accident, such as a description of how the wreck happened, and other pertinent data that your adjustor will need.  Once that is filled out, you can add email addresses to the appropriate fields and hit the EMAIL button to send the report to your insurance adjustor.</p>
-      <button type="button" id="startButton" href="/map">Start!</button>
+      <a href="/map"><button type="button" id="startButton">Start!</button></a>
     </div>
     <div class="mapPage" >
       <p id="mapPageInstructions">Type in the location of your accident, or click the Use My Location button. Then select your car icons and click on the map to place pins to simulate the circumstances of the accident. Then click the Next button to move to the next page where you can give your description of the incident.</p>
@@ -71,7 +71,7 @@
       </section>
       <form action="/Emailsomewhere.php">
         Text Description:<br>
-        <textarea name="name" rows="8" cols="80" class="text-area"></textarea>
+        <textarea name="name" rows="8" cols="80" id="emailBody"class="text-area"></textarea>
         <br><br>
         <input type="submit" value="Email your insurance rep!">
       </form>
