@@ -2,6 +2,8 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjau7uLhokdjg9dF_BKMd3nNrdi3_S2Ak"
+    type="text/javascript"></script>
   <script src="https://use.fontawesome.com/db2379db22.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
@@ -9,17 +11,18 @@
   <meta charset="utf-8">
   <link href="styles/base.css" type="text/css" rel="stylesheet">
   <link href="styles/layout.css" type="text/css" rel="stylesheet">
+  <link href="styles/modules.css" type="text/css" rel="stylesheet">
   <link href="styles/mobile.css" type="text/css" rel="stylesheet">
   <link href="styles/desktop.css" type="text/css" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Report My Wreck!</h1>
+    <h1><a href="/">Report My Wreck!</a></h1>
     <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <nav class"main-nav">
       <div class="icon-menu">
         <ul>
-          <li class="tab" data-content="map"><a href="/">Home</a></li>
+          <!-- <li class="tab" data-content="map"><a href="/">Home</a></li> -->
           <li class="tab" data-content="map"><a href="/map">Map</a></li>
           <li class="tab" data-content="notes"><a href="/notes">Notes</a></li>
           <li class="tab" data-content="about"><a href="/about">About</a></li>
@@ -104,7 +107,5 @@
 <script src="scripts/view/aboutView.js"></script>
 <script src="scripts/view/mapView.js"></script>
 <script src="scripts/view/notesView.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjau7uLhokdjg9dF_BKMd3nNrdi3_S2Ak"
-  type="text/javascript"></script>
 <script src="scripts/controller/routes.js"></script>
 </html>
