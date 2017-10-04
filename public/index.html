@@ -34,7 +34,7 @@
       <button type="button" id="startButton" href="/map">Start!</button>
     </div>
     <div class="mapPage" >
-      <p>Type in the location of your accident, or click the Use My Location button. Then select your car icons and click on the map to place pins to simulate the circumstances of the accident. Then click the Next button to move to the next page where you can give your description of the incident.</p>
+      <p id="mapPageInstructions">Type in the location of your accident, or click the Use My Location button. Then select your car icons and click on the map to place pins to simulate the circumstances of the accident. Then click the Next button to move to the next page where you can give your description of the incident.</p>
       <div id="map"></div>
       <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
       <button id="saveMap" type="button" name="saveMap">Next</button>
@@ -73,11 +73,11 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section>
       <form action="/Emailsomewhere.php">
-  Text Description:<br>
-  <textarea name="name" rows="8" cols="80"></textarea>
-  <br><br>
-  <input type="submit" value="Email your insurance rep!">
-</form>
+        Text Description:<br>
+        <textarea name="name" rows="8" cols="80" class="text-area"></textarea>
+        <br><br>
+        <input type="submit" value="Email your insurance rep!">
+      </form>
     </div>
     <div class="aboutPage">
       <section id="cody">
