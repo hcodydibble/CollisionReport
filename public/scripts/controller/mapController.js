@@ -96,6 +96,9 @@ $('#emailButton').on('click', function(){
   }
   if($('#recipient').val() !== '' && $('#recipient').val().includes('@' && '.')){
     $.post('/mail', mailOptions)
+    $('form')[0].reset();
+    alert('Email sent!')
+    window.location = '/'
   }else{
     alert('Please enter a recipient email.')
   }

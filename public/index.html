@@ -64,15 +64,15 @@
       </aside>
     </div>
     <div class="notesPage">
-      <img id="testImage" src="" />
       <section>
         A picture is worth a thousand words. You now have a captured map displaying where the accident took place along with the vehicle positions. Below, you can email this to your insurance agent or any reciepient of your choice. Please describe in detail how the incident occurred based on the map above.
       </section>
+      <img id="testImage" src="" />
       <form action="/Emailsomewhere.php">
-        Description of Accident:<br>
         <input type="text" id="userName" placeholder="Your Name">
         <input type="email" id="recipient" placeholder="Recipient's Email" required>
         <input type="text" id="subject" placeholder="Subject">
+        Description of Accident:<br>
         <textarea name="name" rows="8" cols="80" id="emailBody" class="text-area"></textarea>
         <br><br>
         <button type="button" id="emailButton">Email Your Rep!</button>
