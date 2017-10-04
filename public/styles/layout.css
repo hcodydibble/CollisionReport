@@ -21,3 +21,13 @@ main {
 #mapPageInstructions {
 	padding-bottom: 2vh;
 }
+
+#map {
+  width: 75vw;
+  height: 60vw;
+  float: left;
+}
+.carIcons {
+  width: 12vw;
+  float: right;
+}

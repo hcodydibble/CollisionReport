@@ -61,9 +61,21 @@ header {
 }
 
 button {
-  height: 30px;
+	align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+  height: 5vw;
   margin: 20px;
 	font-size: 2vw;
 	display: table-cell;
 	vertical-align: middle;
+	text-align: center;
 }

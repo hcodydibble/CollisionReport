@@ -17,4 +17,12 @@
   .tab a {
     padding: 0 1vw;
   }
+  button {
+    height: 3vw;
+    margin: 20px;
+  	font-size: 2vw;
+  	display: table-cell;
+  	vertical-align: middle;
+  }
+
 }
