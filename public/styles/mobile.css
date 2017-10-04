@@ -46,9 +46,12 @@ nav {
 }
 
 button {
-  height: 5vw;
+  height: 10vh;
+  width: 25vw;
   margin: 20px;
-	font-size: 2vw;
-	display: table-cell;
-	vertical-align: middle;
+	font-size: 3vw;
+}
+input{
+  height: 8vh;
+  width: 31vw;
 }
