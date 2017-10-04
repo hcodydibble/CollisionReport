@@ -1,7 +1,7 @@
 'use strict';
 
 var markers = [];
-var initialLocation;
+var mapCenter;
 var car;
 var markerUrls = '';
 var map;
@@ -47,7 +47,6 @@ function myLocation(){
       };
 
       map.setCenter(pos);
-      // initialLocation = pos;
     },
     function() {
       handleLocationError(true, map.getCenter());
@@ -66,10 +65,6 @@ function geocodeAddress(){
   geocoder.geocode({'address': address}, function(results,status){
     if(status === 'OK'){
       map.setCenter(results[0].geometry.location)
-      // initialLocation = {
-      //   lat: results[0].geometry.location.lat().toFixed(6),
-      //   lng: results[0].geometry.location.lng().toFixed(6)
-      // };
       $('#formField').val('');
     }else{
       alert('Geocoding was unsuccessful because of this: ' + status + '.')
@@ -78,13 +73,14 @@ function geocodeAddress(){
 }
 
 $('#saveMap').on('click', function(){
-  initialLocation = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
+  mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
   markers.forEach(function(marker){
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
-  $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=20&size=700x300${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  $('#testImage').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=20&size=700x300${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  notesView();
 })
 
 $('#emailButton').on('click', function(){
@@ -92,7 +88,7 @@ $('#emailButton').on('click', function(){
     from: `"${$('#userName').val()}"<reportmywreck@gmail.com>`,
     to: `${$('#recipient').val()}`,
     subject: `${$('#subject').val()}`,
-    html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${initialLocation.lat},${initialLocation.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
+    html: `<p>${$('#emailBody').val()}</p><img src='https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=21&size=600x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k'>`
   }
   if($('#recipient').val() !== '' && $('#recipient').val().includes('@' && '.')){
     $.post('/mail', mailOptions)
