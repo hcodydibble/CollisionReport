@@ -91,5 +91,5 @@ $('#testButton').on('click', function(){
     subject: 'This hopefully works',
     text: 'You are seeing this if it worked'
   }
-  $.post('/mail', mailOptions).then(()=>console.log('sent'))
+  $.post('/mail', mailOptions).then(console.log('sent'))
 })

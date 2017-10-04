@@ -2,6 +2,7 @@
 
 const EXPRESS = require('express');
 const MAILER = require('nodemailer');
+const PARSER = require('body-parser');
 const APP = EXPRESS();
 const PORT = process.env.PORT || 3000;
 const TRANSPORTER = MAILER.createTransport({
@@ -13,12 +14,15 @@ const TRANSPORTER = MAILER.createTransport({
 })
 
 APP.use(EXPRESS.static('public'));
+APP.use(PARSER.urlencoded({ extended: false }))
+APP.use(PARSER.json())
 
 APP.post('/mail',function(req,res){
-  TRANSPORTER.sendMail(req,function(error,info){
+  TRANSPORTER.sendMail(req.body,function(error,info){
     if(error){
       console.log(error)
     }else{
+      res.send(console.log('sent!'))
       console.log('Email sent: ' + info.response)
     }
   })
