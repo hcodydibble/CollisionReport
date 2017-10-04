@@ -51,14 +51,16 @@ let myLocation = () => {
 $('#myLocationButton').on('click', myLocation);
 
 
-const geocodeAddress = () => {
+const geocodeAddress = (event) => {
+  event.preventDefault();
   var geocoder = new google.maps.Geocoder();
   let address = $('#formField').val()
   geocoder.geocode({'address': address}, (results,status) => {
     status === 'OK' ? map.setCenter(results[0].geometry.location) && $('#formField').val('') : alert('Geocoding was unsuccessful because of this: ' + status + '.');
   });
 }
-$('#geocodeAddressButton').on('click', geocodeAddress);
+
+$('.geocodeAddressButton').on('submit', geocodeAddress);
 
 $('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
