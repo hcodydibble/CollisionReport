@@ -1,27 +1,22 @@
 'use strict';
 
-var markers = [];
-var mapCenter;
-var car;
-var markerUrls = '';
-var map;
+var markers = [], mapCenter, car, markerUrls = '', map;
 
-function initMap() {
+const initMap = () => {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.608810, lng: -122.340021},
     zoom: 21,
   });
 
-  map.addListener('click', function(e) {
-    placeMarker(e.latLng, map);
-  });
+  map.addListener('click', e => placeMarker(e.latLng, map));
 
-  $('#carIcons img').on('click', function(event){
+  $('#carIcons img').on('click', event => {
     car = event.target.src;
     $('#carIcons img').css('border', 'none');
     $(event.target).css('border', 'thin blue solid');
   })
-  function placeMarker(latLng, map) {
+
+  const placeMarker = (latLng, map) => {
     var marker = new google.maps.Marker({
       position: latLng,
       map: map,
@@ -30,17 +25,16 @@ function initMap() {
     });
     markers.push({lat: latLng.lat().toFixed(6), lng: latLng.lng().toFixed(6), marker: marker, path: car});
   }
-  $('#removeMarker').on('click', function(){
+  $('#removeMarker').on('click', () => {
     markers[markers.length - 1].marker.setMap(null);
     markers.pop()
   })
 }
 
-$('#myLocationButton').on('click', myLocation);
 
-function myLocation(){
+let myLocation = () => {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation.getCurrentPosition(position => {
       var pos = {
         lat: position.coords.latitude,
         lng: position.coords.longitude
@@ -48,34 +42,28 @@ function myLocation(){
 
       map.setCenter(pos);
     },
-    function() {
-      handleLocationError(true, map.getCenter());
-    });
+    () => handleLocationError(true, map.getCenter()));
   } else {
     // Browser doesn't support Geolocation
     handleLocationError(false, map.getCenter());
   }
 }
+$('#myLocationButton').on('click', myLocation);
 
-$('#geocodeAddressButton').on('click', geocodeAddress);
 
-function geocodeAddress(){
+const geocodeAddress = () => {
   var geocoder = new google.maps.Geocoder();
   let address = $('#formField').val()
-  geocoder.geocode({'address': address}, function(results,status){
-    if(status === 'OK'){
-      map.setCenter(results[0].geometry.location)
-      $('#formField').val('');
-    }else{
-      alert('Geocoding was unsuccessful because of this: ' + status + '.')
-    }
+  geocoder.geocode({'address': address}, (results,status) => {
+    status === 'OK' ? map.setCenter(results[0].geometry.location) && $('#formField').val('') : alert('Geocoding was unsuccessful because of this: ' + status + '.');
   });
 }
+$('#geocodeAddressButton').on('click', geocodeAddress);
 
-$('#saveMap').on('click', function(){
+$('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
-  markers.forEach(function(marker){
+  markers.forEach(marker => {
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
@@ -83,7 +71,7 @@ $('#saveMap').on('click', function(){
   notesView();
 })
 
-$('#emailButton').on('click', function(){
+$('#emailButton').on('click', () => {
   var mailOptions = {
     from: `"${$('#userName').val()}"<reportmywreck@gmail.com>`,
     to: `${$('#recipient').val()}`,
