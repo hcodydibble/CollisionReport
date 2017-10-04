@@ -30,11 +30,11 @@
   </header>
   <main>
     <div class="indexPage">
-      <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Then you can select icons to represent the orientation of the vehicles involved and drop them as pins to the map.  Once you have completed the visual representation of the accident, click on NEXT.  Now you can add notes about the accident, such as a description of how the wreck happened, and other pertinent data that your adjustor will need.  Once that is filled out, you can add email addresses to the appropriate fields and hit the EMAIL button to send the report to your insurance adjustor.</p>
+      <p>Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.  Once you click the START button you will be directed to the maps page.  On the maps page, allow use of location services or input the location of the wreck so we can get you on the map.  Select the car icon from the SELECT A CAR dropdown menu that you would like to use first; click the location on the map where you would like to drop that icon. You can add as many car icons as you would like. If you would like to remove the last icon added, use the REMOVE LAST MARKER button.  Once you have completed the visual representation of the accident, click on NEXT to review your map and add notes about the incident.  You can add a description of how the wreck happened and other pertinent data that your adjustor will need.  Once that is filled out, add the email address for your insurance adjustor and hit the EMAIL button; we'll send the email on your behalf so don't forget to add your name and any memo you would like to include. You can also choose to include your email address to receive a copy of the form for your own records.</p>
       <a href="/map"><button type="button" id="startButton">Start!</button></a>
     </div>
     <div class="mapPage" >
-      <p id="mapPageInstructions">Type in the location of your accident, or click the Use My Location button. Then select your car icons and click on the map to place pins to simulate the circumstances of the accident. Then click the Next button to move to the next page where you can give your description of the incident.</p>
+      <p id="mapPageInstructions">Type in the location of your accident (intersection and city or street address), or click the USE MY LOCATION button. Then select your car icons and click on the map to place the icons in order to simulate the circumstances of the accident. When you are finished click the NEXT button to save your image and go to the submission page. You will be able to add your description of the incident before submitting the form.</p>
       <div id="map"></div>
       <aside class="carIcons">
         <button id="carSelect" type="button" name="button">Car Icons</button>
@@ -68,7 +68,7 @@
     </div>
     <div class="notesPage">
       <section>
-        A picture is worth a thousand words. You now have a captured map displaying where the accident took place along with the vehicle positions. Below, you can email this to your insurance agent, yourself, or any reciepient of your choice. Please describe in detail how the incident occurred based on the map above.
+        A picture is worth a thousand words. You now have a map displaying where the accident took place along with the vehicle positions. Below, you can email this to your insurance agent or any reciepient of your choice. Please describe in detail how the incident occurred and click EMAIL YOUR REP to send the form to the email address provided.
       </section>
       <img id="testImage" src="" />
       <form action="/Emailsomewhere.php">
