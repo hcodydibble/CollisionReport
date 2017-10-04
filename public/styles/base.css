@@ -93,3 +93,6 @@ h1,li{
 button,input:focus{
 	outline: 0;
 }
+form {
+	display: inline;
+}
