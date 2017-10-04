@@ -67,18 +67,17 @@
     </div>
     <div class="notesPage">
       <img id="testImage" src="" />
-      <button type="button" id="testButton" name="button">Test Email</button>
       <section>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </section>
       <form action="/Emailsomewhere.php">
-        Text Description:<br>
+        Description of Accident:<br>
         <input type="text" id="userName" placeholder="Your Name">
-        <input type="text" id="recipient" placeholder="Recipient">
+        <input type="email" id="recipient" placeholder="Recipient's Email" required>
         <textarea name="name" rows="8" cols="80" id="emailBody" class="text-area"></textarea>
         <br><br>
-        <input type="submit" value="Email your insurance rep!">
+        <button type="button" id="emailButton">Email Your Rep!</button>
       </form>
     </div>
     <div class="aboutPage">
