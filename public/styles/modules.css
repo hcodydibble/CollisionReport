@@ -6,3 +6,8 @@
   color: #2FC2FF;
   text-decoration: none;
 }
+.formInput {
+  border: 1px solid black;
+  margin: 1vh 0;
+  width: 100%;
+}

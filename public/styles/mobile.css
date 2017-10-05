@@ -71,9 +71,9 @@ input{
   width: 100%;
 }
 
-#testImage{
+#mapPreview{
   height: 70vw;
-  width: 100vw;
+  width: 100%;
 }
 
 #move{
@@ -81,8 +81,8 @@ input{
 }
 
 #userName,#recipient{
-  width: 41vw;
+  width: 100%;
 }
 #subject{
-  width: 83vw;
+  width: 100%;
 }
