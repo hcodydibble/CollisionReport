@@ -36,4 +36,10 @@
     opacity: 1;
   }
 
+  #map {
+    width: 75vw;
+    height: 60vw;
+    float: left;
+  }
+
 }

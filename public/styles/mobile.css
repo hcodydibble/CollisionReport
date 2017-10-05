@@ -16,6 +16,23 @@ nav {
   float: right;
 }
 
+button {
+  border-radius: 13%;
+  background-color: #303F9F;
+  border-color: black;
+  color: white;
+  height: 10vh;
+  width: 25vw;
+  margin: 20px;
+	font-size: 3vw;
+}
+
+input{
+  height: 8vh;
+  width: 31vw;
+}
+
+
 .tab {
   display: inline-block;
 }
@@ -41,17 +58,31 @@ nav {
 	border: 1px solid black;
 }
 
+.aboutPage section{
+  background-color: #C5CAE9;
+}
+
 #robCar{
   max-width: 100%;
 }
 
-button {
-  height: 10vh;
-  width: 25vw;
-  margin: 20px;
-	font-size: 3vw;
+#map {
+  height: 70vw;
+  width: 100vw;
 }
-input{
-  height: 8vh;
-  width: 31vw;
+
+#testImage{
+  height: 70vw;
+  width: 100vw;
+}
+
+#move{
+  display: block;
+}
+
+#userName,#recipient{
+  width: 41vw;
+}
+#subject{
+  width: 83vw;
 }
