@@ -8,6 +8,21 @@ const initMap = () => {
     zoom: 21,
   });
 
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        map.setCenter(pos);
+      },
+      () => handleLocationError(true, map.getCenter()));
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, map.getCenter());
+    }
+
   map.addListener('click', e => placeMarker(e.latLng, map));
 
   $('#carIcons img').on('click', event => {
@@ -32,24 +47,26 @@ const initMap = () => {
 }
 
 
-let myLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
+// let myLocation = () => {
+// {
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition(position => {
+//       var pos = {
+//         lat: position.coords.latitude,
+//         lng: position.coords.longitude
+//       };
+//
+//       map.setCenter(pos);
+//     },
+//     () => handleLocationError(true, map.getCenter()));
+//   } else {
+//     // Browser doesn't support Geolocation
+//     handleLocationError(false, map.getCenter());
+//   }
+// }
+// }
 
-      map.setCenter(pos);
-    },
-    () => handleLocationError(true, map.getCenter()));
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, map.getCenter());
-  }
-}
-
-$('#myLocationButton').on('click', myLocation);
+// $('#myLocationButton').on('click', myLocation);
 
 
 const geocodeAddress = (event) => {
