@@ -1,3 +1,7 @@
+.clearfix {
+  clear: both;
+}
+
 body{
   width: 100%;
 }
@@ -12,6 +16,18 @@ form {
 
 main {
   margin: 2vh 5vw;
+}
+
+.instructions {
+  width: 100%;
+}
+
+.introImages {
+  width: 25%;
+}
+
+#notepad {
+  float: right;
 }
 
 .aboutUs {
