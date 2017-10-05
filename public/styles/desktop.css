@@ -167,5 +167,9 @@
     width: 20vw;
     height: 20vh;
     border: 5px groove black;
+    transition: transform .5s;
+  }
+  .car:hover{
+    transform: scale(1.3);
   }
 }
