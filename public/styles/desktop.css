@@ -15,7 +15,21 @@
   }
 
   .instructions {
-    font-size: 2em;
+    font-size: 1em;
+    width: 28vw;
+    float: left;
+  }
+
+  .introImages {
+    width: 50%;
+  }
+
+  .hideMeForDesktop {
+    display: none;
+  }
+
+  #notepad {
+    float: left;
   }
 
   .tab a {
