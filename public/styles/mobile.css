@@ -13,6 +13,7 @@ p {
 .introInstructions {
   margin-bottom: 2vh;
 }
+
 section img {
   height: 20vh;
 }
@@ -49,12 +50,13 @@ input{
   padding: 0 8vw;
 }
 #navmap {
-position: absolute;
-    right: -2vh;
-    top: 9vh;
-    color: black;
-    font-size: 1.5em;
+   position: absolute;
+   right: -2vh;
+   top: 9vh;
+   color: black;
+   font-size: 1.5em;
 }
+
 #navabout {
 position: absolute;
 right: 7vh;
@@ -84,7 +86,7 @@ font-size: 1.5em;
 }
 
 .aboutPage section{
-  background-color: #C5CAE9;
+  font-size: 1.5em;
 }
 
 #robCar{
@@ -119,5 +121,12 @@ font-size: 1.5em;
 .cargif img {
   width: 50%;
     position: relative;
-    top: -4vh;
+    top: -5vh;
+}
+
+#setAddress {
+  width: 17%;
+  float: right;
+  margin: 0;
+  height: 8vh;
 }
