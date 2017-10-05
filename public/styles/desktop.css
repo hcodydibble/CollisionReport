@@ -27,6 +27,7 @@
   }
   header{
     height: 16vh;
+    position: relative;
   }
   h2{
     display: block;
@@ -93,16 +94,18 @@
   }
 
 .cargif {
-  height: 19vh;
   overflow: hidden;
-  margin-left: 17.8vw;
   display: inline-block;
   position: relative;
-  top: -1.5vh;
+  top: -8.5vh;
+  width: 400px;
+  left: 7vw;
 }
 
 .cargif img {
   width: 100%;
+  position: relative;
+  top: -4vh;
 }
 
   .introInstructions{
@@ -144,7 +147,7 @@
     width: 74.7%;
   }
   .mapPage button, .notesPage button {
-    font-size: 1.3em;
+    font-size: 1em;
   }
   .mapPage p {
     font-size: 1.5em;
@@ -152,7 +155,7 @@
   #setAddress {
     width: 7vw;
     position: relative;
-    top: -.5vh;
+    top: -.9vh;
     float: none;
   }
   .mapPreviewBox {

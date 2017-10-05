@@ -5,8 +5,23 @@ var markers = [], mapCenter, car, markerUrls = '', map;
 const initMap = () => {
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: 47.608810, lng: -122.340021},
-    zoom: 21,
+    zoom: 20,
   });
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+
+        map.setCenter(pos);
+      },
+      () => handleLocationError(true, map.getCenter()));
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, map.getCenter());
+    }
 
   map.addListener('click', e => placeMarker(e.latLng, map));
 
@@ -30,27 +45,6 @@ const initMap = () => {
     markers.pop()
   })
 }
-
-
-let myLocation = () => {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(position => {
-      var pos = {
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      };
-
-      map.setCenter(pos);
-    },
-    () => handleLocationError(true, map.getCenter()));
-  } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, map.getCenter());
-  }
-}
-
-$('#myLocationButton').on('click', myLocation);
-
 
 const geocodeAddress = (event) => {
   event.preventDefault();
