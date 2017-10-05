@@ -58,8 +58,12 @@
     <div class="mapPage" >
       <p id="mapPageInstructions">Select a car icon from the drop down menu and add it to the map by clicking where you want to drop it. When you are finished click the SUBMIT MAP button to save your image and go to the submission page. You will be able to add your description of the incident before submitting the form.</p>
       <div id="map"></div>
+      <form class="geocodeAddressButton">
+        <input id="formField"type="text" name="" value="" placeholder="Enter an Address or Intersection">
+      </form>
+      <button id="setAddress">Set Address</button>
+      <button id="myLocationButton"type="button" name="button">Use My Location</button>
       <aside class="carIcons">
-        <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
         <button id="carSelect" type="button" name="button">Car Icons</button>
         <ul id="carIcons">
           <li><img src="img/0deg-white.png" alt=""></li>
@@ -81,11 +85,7 @@
         </ul>
       </aside>
       <section class="controls">
-        <button id="myLocationButton"type="button" name="button">Use My Location</button>
-        <form class="geocodeAddressButton">
-          <input id="formField"type="text" name="" value="" placeholder="Enter an Address or Intersection">
-        </form>
-        <button id="setAddress">Set Address</button>
+        <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
         <button id="saveMap" type="button" name="saveMap">Submit Map &rarr;</button>
       </section>
     </div>

@@ -11,3 +11,9 @@
   margin: 1vh 0;
   width: 100%;
 }
+
+#formField {
+  height: 8vh;
+  border: 1px solid black;
+  width: 100%;
+}
