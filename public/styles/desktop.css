@@ -14,12 +14,20 @@
     display: inline;
     float: right;
     position: relative;
-    top: 2.5vh
+    top: 6vh
   }
   nav ul li {
     margin-right: .4em;
     font-size: 1.5em;
     display: inline;
+  }
+  header{
+    height: 16vh;
+  }
+  h2{
+    display: block;
+    font-size: 4em;
+    text-align: center;
   }
 
   .instructions {
@@ -69,25 +77,43 @@
     width: 50%;
   }
 
-  .cargif {
-    height: 19vh;
-    overflow: hidden;
-    margin-left: 5vw;
-    display: inline-block;
-    position: relative;
-    top: -4vh;
-  }
+.cargif {
+  height: 19vh;
+  overflow: hidden;
+  margin-left: 17.8vw;
+  display: inline-block;
+  position: relative;
+  top: -1.5vh;
+}
 
-  .cargif img {
-    width: 75%;
-  }
+.cargif img {
+  width: 100%;
+}
 
+  .introInstructions{
+    text-align: center;
+    font-size: 1.5em;
+  }
   #logo {
     font-style: oblique;
     font-size: 2em;
-    margin: 1.5vh 0vw;
+    margin: 2.5vh 0vw;
     float: left;
     color: black;
+  }
+  #navmap {
+    position: absolute;
+    right: -2vh;
+    top: -2vh;
+    color: black;
+    font-size: 1.5em;
+  }
+  #navabout {
+    position: absolute;
+    right: 7vh;
+    top: -2vh;
+    color: black;
+    font-size: 1.5em;
   }
 
   .tab {
