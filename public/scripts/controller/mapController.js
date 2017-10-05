@@ -28,7 +28,7 @@ const initMap = () => {
   $('#carIcons img').on('click', event => {
     car = event.target.src;
     $('#carIcons img').css({border:'none', opacity: '0.6'});
-    $(event.target).css({border:'black solid', opacity: '1'});
+    $(event.target).css({border:'thin black solid', opacity: '1'});
   })
 
   const placeMarker = (latLng, map) => {
