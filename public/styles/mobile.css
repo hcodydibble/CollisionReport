@@ -40,6 +40,10 @@ input{
   width: 31vw;
 }
 
+.tab {
+  display: inline-block;
+}
+
 .tab a {
   color: black;
   padding: 0 8vw;
