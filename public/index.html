@@ -19,20 +19,23 @@
 <body>
   <header>
     <h1><a href="/" id="logo">Report My Wreck!</a></h1>
-    <img src="img/loader.gif" alt="">
+    <div class="cargif">
+      <img src="img/loader.gif" alt="">
+    </div>
     <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
     <nav class"main-nav">
       <div class="icon-menu">
         <ul>
-          <li class="tab" data-content="map"><a href="/map">Map</a></li>
-          <li class="tab" data-content="about"><a href="/about">About</a></li>
+          <li class="tab" id="navmap"><a href="/map">Map</a></li>
+          <li class="tab" id="navabout"><a href="/about">About</a></li>
         </ul>
       </div>
     </nav>
   </header>
   <main>
     <div class="indexPage">
-      <p class="introInstructions">Welcome to the Report My Wreck! app.  With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.</p>
+      <h2>Welcome to Report My Wreck!</h2>
+      <p class="introInstructions">With this app you can use an interactive map to visually display your wreck for insurance reporting purposes.</p>
       <div class="instructions">
         <img src="./img/Google_Maps.png" alt="" class="introImages">
         <p>Mark up the map to reflect your accident.</p>

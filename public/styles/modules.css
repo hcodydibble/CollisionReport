@@ -5,9 +5,21 @@
 #logo {
   color: #2FC2FF;
   text-decoration: none;
+  font-size: 2em;
 }
 .formInput {
   border: 1px solid black;
   margin: 1vh 0;
   width: 100%;
+}
+header {
+  padding: 25px 25px 0px 25px;
+  height: 14vh;
+  /*background-image: linear-gradient(blue, green);*/
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3ef9f9+33,3ef9f9+33,c2fcfc+49,aff1ff+59,008a00+80,7f7f7f+89 */
+background: #3ef9f9; /* Old browsers */
+background: -moz-linear-gradient(top, #3ef9f9 33%, #3ef9f9 33%, #c2fcfc 49%, #aff1ff 59%, #008a00 80%, #7f7f7f 89%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #3ef9f9 33%,#3ef9f9 33%,#c2fcfc 49%,#aff1ff 59%,#008a00 80%,#7f7f7f 89%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #3ef9f9 33%,#3ef9f9 33%,#c2fcfc 49%,#aff1ff 59%,#008a00 80%,#7f7f7f 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ef9f9', endColorstr='#7f7f7f',GradientType=0 ); /* IE6-9 */
 }
