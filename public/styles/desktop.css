@@ -126,8 +126,11 @@
   #formField {
     font-size: 2em;
   }
-  .mapPage button {
+  .mapPage button, .notesPage button {
     font-size: 1.3em;
+  }
+  .mapPage p {
+    font-size: 1.5em;
   }
   #setAddress {
     width: 7vw;
@@ -151,5 +154,18 @@
     font-size: 1.5em;
     text-align: center;
     margin-bottom: 2vh;
+  }
+  .aboutImage {
+    display: inline-block;
+    width: 28%;
+  }
+  .aboutBlurb {
+    display: inline-block;
+    width: 70%;
+  }
+  .car {
+    width: 20vw;
+    height: 20vh;
+    border: 5px groove black;
   }
 }
