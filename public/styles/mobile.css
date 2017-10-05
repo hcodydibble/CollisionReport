@@ -13,6 +13,7 @@ p {
 .introInstructions {
   margin-bottom: 2vh;
 }
+
 section img {
   height: 20vh;
 }
@@ -120,4 +121,11 @@ font-size: 1.5em;
   width: 50%;
     position: relative;
     top: -4vh;
+}
+
+#setAddress {
+  width: 17%;
+  float: right;
+  margin: 0;
+  height: 8vh;
 }
