@@ -1,6 +1,6 @@
 'use strict';
 
-var markers = [], mapCenter, car, markerUrls = '', map;
+var markers = [], mapCenter, car, markerUrls = '', map, zoom;
 
 const initMap = () => {
   map = new google.maps.Map(document.getElementById('map'), {
@@ -8,20 +8,20 @@ const initMap = () => {
     zoom: 20,
   });
 
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(position => {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(position => {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
 
-        map.setCenter(pos);
-      },
-      () => handleLocationError(true, map.getCenter()));
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, map.getCenter());
-    }
+      map.setCenter(pos);
+    },
+    () => handleLocationError(true, map.getCenter()));
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, map.getCenter());
+  }
 
   map.addListener('click', e => placeMarker(e.latLng, map));
 
@@ -61,11 +61,13 @@ $('#setAddress').on('click', geocodeAddress);
 $('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
+  zoom = map.getZoom() - 1
+  console.log(zoom)
   markers.forEach(marker => {
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
-  $('#mapPreview').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=${map.getZoom()}&size=700x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  $('#mapPreview').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=${zoom}&size=700x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
   notesView();
 })
 
