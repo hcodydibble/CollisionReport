@@ -48,6 +48,7 @@ let myLocation = () => {
     handleLocationError(false, map.getCenter());
   }
 }
+
 $('#myLocationButton').on('click', myLocation);
 
 
