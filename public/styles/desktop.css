@@ -63,4 +63,9 @@
   #userName,#recipient{
     width: 50%;
   }
+
+  #formField {
+    height: 8vh;
+    width: 26vw;
+  }
 }

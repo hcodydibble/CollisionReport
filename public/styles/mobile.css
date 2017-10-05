@@ -80,9 +80,6 @@ input{
   display: block;
 }
 
-#userName,#recipient{
-  width: 100%;
-}
-#subject{
+#userName,#recipient, #subject{
   width: 100%;
 }
