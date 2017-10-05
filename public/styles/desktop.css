@@ -4,6 +4,12 @@
     display: none;
   }
 
+  h1 {
+    position: relative;
+    top: 1vh;
+    font-size: 1em;
+  }
+
   .icon-menu {
     display: inline;
     float: right;
@@ -34,9 +40,6 @@
     float: left;
   }
 
-  .tab a {
-    padding: 0 1vw;
-  }
   button {
     height: 3vw;
     margin: 20px;
@@ -66,19 +69,19 @@
     width: 50%;
   }
 
-  header{
-    background-image: linear-gradient(blue, green);
-  }
   .cargif {
-  height: 19vh;
-  overflow: hidden;
-  width: 25vw;
-  margin-left: 5vw;
-  display: inline-block;
-  position: relative;
-  top: -68px;
-  /*background-image: linear-gradient(blue, green);*/
+    height: 19vh;
+    overflow: hidden;
+    margin-left: 5vw;
+    display: inline-block;
+    position: relative;
+    top: -4vh;
   }
+
+  .cargif img {
+    width: 75%;
+  }
+
   #logo {
     font-style: oblique;
     font-size: 2em;
@@ -93,6 +96,6 @@
   }
   .tab a {
     color: black;
-
+    padding: 0 1vw;
   }
 }

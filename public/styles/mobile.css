@@ -50,12 +50,10 @@ input{
   padding: 0 8vw;
 }
 #navmap {
-position: absolute;
-    right: -2vh;
-    top: 9vh;
-    color: black;
-    font-size: 1.5em;
+  color: black;
+  font-size: 1.5em;
 }
+
 #navabout {
 position: absolute;
 right: 7vh;
