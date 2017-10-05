@@ -1,7 +1,6 @@
 h1 {
   font-style: oblique;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 2em;
   float: left;
 }
 
@@ -30,11 +29,6 @@ button {
 input{
   height: 8vh;
   width: 31vw;
-}
-
-
-.tab {
-  display: inline-block;
 }
 
 .tab a {

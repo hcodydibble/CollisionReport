@@ -5,6 +5,7 @@
 #logo {
   color: #2FC2FF;
   text-decoration: none;
+  font-size: 2em;
 }
 .formInput {
   border: 1px solid black;
