@@ -135,4 +135,21 @@
     top: -.5vh;
     float: none;
   }
+  .mapPreviewBox {
+    border: 1px solid black;
+    height: 25%;
+    width: 40%;
+  }
+  #mapPreview{
+    height: 100%;
+    width: 100%;
+  }
+  input, textarea {
+    font-size: 2em;
+  }
+  .notesPage section{
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 2vh;
+  }
 }
