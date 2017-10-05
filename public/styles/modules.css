@@ -30,3 +30,8 @@ background: -webkit-linear-gradient(top, #3ef9f9 33%,#3ef9f9 33%,#c2fcfc 49%,#af
 background: linear-gradient(to bottom, #3ef9f9 33%,#3ef9f9 33%,#c2fcfc 49%,#aff1ff 59%,#008a00 80%,#7f7f7f 89%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3ef9f9', endColorstr='#7f7f7f',GradientType=0 ); /* IE6-9 */
 }
+
+h1 {
+  position: relative;
+  z-index: 20;
+}
