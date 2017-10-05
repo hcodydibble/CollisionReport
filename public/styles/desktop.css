@@ -50,11 +50,10 @@
 
   button {
     height: 3vw;
-    margin: 20px;
-  	font-size: 2vw;
-  	display: table-cell;
-  	vertical-align: middle;
+    width: 13vw;
+    font-size: 2vw;
     cursor: pointer;
+    border-radius: 0%;
   }
   #carIcons{
     text-align: center;
@@ -123,5 +122,17 @@
   .tab a {
     color: black;
     padding: 0 1vw;
+  }
+  #formField {
+    font-size: 2em;
+  }
+  .mapPage button {
+    font-size: 1.3em;
+  }
+  #setAddress {
+    width: 7vw;
+    position: relative;
+    top: -.5vh;
+    float: none;
   }
 }
