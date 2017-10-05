@@ -73,24 +73,27 @@
   .cargif {
   height: 19vh;
   overflow: hidden;
-  width: 35vw;
+  width: 25vw;
   margin-left: 5vw;
   display: inline-block;
   position: relative;
-  top: -68px
+  top: -68px;
+  /*background-image: linear-gradient(blue, green);*/
   }
   #logo {
     font-style: oblique;
     font-size: 2em;
     margin: 1.5vh 0vw;
     float: left;
+    color: black;
   }
-  header {
-    padding: 25px 25px 0px 25px;
-    height: 14vh;
-  }
+
   .tab {
     display: inline-block;
     font-size: 2em;
+  }
+  .tab a {
+    color: black;
+
   }
 }

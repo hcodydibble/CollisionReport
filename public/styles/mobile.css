@@ -3,7 +3,16 @@ h1 {
   font-size: 2em;
   float: left;
 }
+h2 {
+  display: none;
+}
+p {
+    font-size: 1em;
+}
 
+.introInstructions {
+  margin-bottom: 2vh;
+}
 section img {
   height: 20vh;
 }
@@ -32,14 +41,32 @@ input{
 }
 
 .tab a {
-  color: #2FC2FF;
+  color: black;
   padding: 0 8vw;
+}
+#navmap {
+position: absolute;
+    right: -2vh;
+    top: 9vh;
+    color: black;
+    font-size: 1.5em;
+}
+#navabout {
+position: absolute;
+right: 7vh;
+top: 9vh;
+color: black;
+font-size: 1.5em;
 }
 
 .hamburger {
-  font-size: 2em;
-  padding-right: 4vw;
-  float: right;
+    font-size: 2em;
+    padding-right: 4vw;
+    float: right;
+    position: absolute;
+    top: 3.6vh;
+    right: 4vw;
+    color: black;
 }
 
 .icon-menu {
@@ -76,4 +103,17 @@ input{
 
 #userName,#recipient, #subject{
   width: 100%;
+}
+
+#logo {
+  font-style: oblique;
+  font-size: 1em;
+  float: left;
+  color: black;
+}
+
+.cargif img {
+  width: 50%;
+    position: relative;
+    top: -4vh;
 }
