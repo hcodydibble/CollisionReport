@@ -54,6 +54,7 @@
       <p id="mapPageInstructions">Type in the location of your accident (intersection and city or street address), or click the USE MY LOCATION button. Then select your car icons and click on the map to place the icons in order to simulate the circumstances of the accident. When you are finished click the NEXT button to save your image and go to the submission page. You will be able to add your description of the incident before submitting the form.</p>
       <div id="map"></div>
       <aside class="carIcons">
+        <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
         <button id="carSelect" type="button" name="button">Car Icons</button>
         <ul id="carIcons">
           <li><img src="img/0deg-white.png" alt=""></li>
@@ -79,8 +80,7 @@
         <form class="geocodeAddressButton">
           <input id="formField"type="text" name="" value="" placeholder="Enter an Address or Intersection">
         </form>
-        <button id="removeMarker" type="button" name="removeMarker">Remove Last Marker</button>
-        <button id="saveMap" type="button" name="saveMap">Next</button>
+        <button id="saveMap" type="button" name="saveMap">Next &rarr;</button>
       </section>
     </div>
     <div class="notesPage">
@@ -88,13 +88,11 @@
         A picture is worth a thousand words. You now have a map displaying where the accident took place along with the vehicle positions. Below, you can email this to your insurance agent or any reciepient of your choice. Please describe in detail how the incident occurred and click EMAIL YOUR REP to send the form to the email address provided.
       </section>
       <img id="testImage" src="" />
-      <form action="/Emailsomewhere.php">
+      <form id="move">
         <input type="text" id="userName" placeholder="Your Name">
         <input type="email" id="recipient" placeholder="Recipient's Email" required>
         <input type="text" id="subject" placeholder="Subject">
-        Description of Accident:<br>
-        <textarea name="name" rows="8" cols="80" id="emailBody" class="text-area"></textarea>
-        <br><br>
+        <textarea name="name" rows="8" cols="80" id="emailBody" class="text-area" placeholder="Enter your account of the accident"></textarea>
         <button type="button" id="emailButton">Email Your Rep!</button>
       </form>
     </div>
