@@ -62,6 +62,7 @@ const geocodeAddress = (event) => {
 }
 
 $('.geocodeAddressButton').on('submit', geocodeAddress);
+$('#setAddress').on('click', geocodeAddress);
 
 $('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
