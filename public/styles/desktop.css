@@ -62,7 +62,7 @@
   }
   #carIcons{
     position: absolute;
-    top: 50vh;
+    top: 54vh;
     right: 3.5vw;
   }
   #carIcons li img{
@@ -110,7 +110,7 @@
 .cargif img {
   width: 100%;
   position: relative;
-  top: -4vh;
+  top: 2vh;
 }
 
   .introInstructions{
