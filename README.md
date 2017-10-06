@@ -16,8 +16,8 @@
 
  Shayne Smith - Design Consultant
  Gabe Meringolo - Graphic Design
- Nick Hunt-Walker - CSS Debugger
- Megan Flood - Technical Support
+ Nick Hunt-Walker - CSS Debugger, API support, & Burner of Broken Projects
+ Megan Flood, Luay Younus, Han Bao - Technical Support
 
 Content:
 https://dribbble.com/shots/3781908-Car-Dealer-GIF-Loader
