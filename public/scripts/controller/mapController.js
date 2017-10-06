@@ -61,7 +61,7 @@ $('#setAddress').on('click', geocodeAddress);
 $('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
-  zoom = map.getZoom() - 1
+  zoom = map.getZoom();
   console.log(zoom)
   markers.forEach(marker => {
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
