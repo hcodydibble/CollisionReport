@@ -1,5 +1,5 @@
 
-@media all and (min-width: 800px) {
+@media all and (min-width: 825px) {
   .hamburger {
     display: none;
   }
@@ -74,13 +74,14 @@
   }
   #carSelect{
     position: absolute;
-    top: 40vh;
+    top: 46vh;
     right: 3vw;
   }
   #removeMarker{
     position: absolute;
-    top: 32vh;
+    top: 38vh;
     right: 3vw;
+    height: 7vh;
   }
 
   #map {
