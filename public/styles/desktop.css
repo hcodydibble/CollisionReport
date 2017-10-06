@@ -84,6 +84,10 @@
     height: 7vh;
   }
 
+  #saveMap {
+    height: 5vw;
+  }
+
   #map {
     width: 70vw;
     height: 55vw;
