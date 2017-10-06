@@ -23,7 +23,7 @@
   }
   ul{
     column-count: 4;
-    width: 12vw;
+    width: 16vw;
   }
   header{
     height: 16vh;
@@ -63,7 +63,7 @@
   #carIcons{
     position: absolute;
     top: 50vh;
-    right: 5vw;
+    right: 3.5vw;
   }
   #carIcons li img{
     opacity: 0.6;
