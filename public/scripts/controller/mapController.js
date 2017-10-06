@@ -28,7 +28,7 @@ const initMap = () => {
   $('#carIcons img').on('click', event => {
     car = event.target.src;
     $('#carIcons img').css({border:'none', opacity: '0.6'});
-    $(event.target).css({border:'black solid', opacity: '1'});
+    $(event.target).css({border:'thin black solid', opacity: '1'});
   })
 
   const placeMarker = (latLng, map) => {
@@ -61,13 +61,13 @@ $('#setAddress').on('click', geocodeAddress);
 $('#saveMap').on('click', () => {
   mapCenter = {lat: map.getCenter().lat(), lng: map.getCenter().lng()}
   markerUrls = '';
-  zoom = map.getZoom() - 1
+  zoom = map.getZoom();
   console.log(zoom)
   markers.forEach(marker => {
     markerUrls += '&markers=icon:' + marker.path + '|' + marker.lat + ',' + marker.lng;
     return markerUrls;
   })
-  $('#mapPreview').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${mapCenter.lat},${mapCenter.lng}&zoom=${zoom}&size=700x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
+  $('#mapPreview').attr('src', `https://maps.googleapis.com/maps/api/staticmap?center=${markers[0].lat},${markers[0].lng}&zoom=${zoom}&size=700x600${markerUrls}&key=AIzaSyD-PrvzwpOWXJ7A2TRqspmdyHQlA7F1_5k`)
   notesView();
 })
 
